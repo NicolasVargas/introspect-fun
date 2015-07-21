@@ -20,7 +20,7 @@ function withNestedFunc (arg1) {
     function myNested (nestedArg) {}
 };
 
-var res1 = introspect(noArgs); // res2 = []
+var res1 = introspect(noArgs); // res1 = []
 var res2 = introspect(withArgs); // res2 = ['arg1', 'arg2', 'hello']
 var res3 = introspect(withArgsBis); // res3 = ['arg1', 'arg2', 'arg3']
 var res4 = introspect(function(arg1){}); // res4 = arg['arg1']
@@ -32,7 +32,7 @@ Generator functions and arrows won't be a problem under ```--harmony``` flag
 var introspect = require('introspect-fun');
 var gen = function*(arg1, arg2) {};
 
-var resGen = introspect(gen); // res2 = ['arg1', 'arg2']
+var resGen = introspect(gen); // resGen = ['arg1', 'arg2']
 var resArrow = introspect(arg1 => arg1+1); // resArrow = ['arg1']
 ```
 ## Support
