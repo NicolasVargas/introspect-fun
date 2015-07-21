@@ -1,0 +1,35 @@
+{
+  "name": "introspect-fun",
+  "version": "1.0.0",
+  "description": "JavaScript function introspection to retrieve the parameters' name of a function",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register -u exports -R spec ./test/",
+    "lint": "eslint --ext .js ./lib ./test"
+  },
+  "keywords": [
+    "introspection",
+    "function",
+    "parameters",
+    "arguments",
+    "name",
+    "generator",
+    "arrow"
+  ],
+  "author": "Nicolas VARGAS",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.7.4",
+    "chai": "^3.2.0",
+    "eslint": "^0.24.1",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}

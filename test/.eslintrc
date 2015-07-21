@@ -1,0 +1,11 @@
+---
+env:
+  mocha: true
+  es6: true
+
+rules:
+  indent: [1, 2]
+  no-console: 1
+  quotes: [1, single]
+  no-underscore-dangle: 1
+  semi: 1
