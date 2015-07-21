@@ -14,7 +14,6 @@ npm install --save introspect-fun
 var introspect = require('introspect-fun');
 var noArgs = function() {};
 var withArgs = function(arg1, arg2, hello) {};
-var withArgs = function(arg1, arg2, hello) {};
 function withArgsBis (arg1, arg2, arg3) {};
 function withNestedFunc (arg1) {
     function myNested (nestedArg) {}
