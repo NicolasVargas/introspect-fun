@@ -15,7 +15,7 @@ var introspect = require('introspect-fun');
 var noArgs = function() {};
 var withArgs = function(arg1, arg2, hello) {};
 function withArgsBis (arg1, arg2, arg3) {};
-function withNestedFunc (arg1) {
+function withNestedFunc (notNestedArg) {
     function myNested (nestedArg) {}
 };
 
@@ -29,10 +29,10 @@ var res3 = introspect(withArgsBis);
 // res3 = ['arg1', 'arg2', 'arg3']
 
 var res4 = introspect(function(arg1){});
-// res4 = arg['arg1']
+// res4 = ['arg1']
 
 var res5 = introspect(withNestedFunc);
-// res5 = arg['arg1']
+// res5 = ['notNestedArg']
 ```
 ### ES6 Generator functions an arrow functions
 [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) functions and [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) won't be a problem under ```--harmony``` flag
