@@ -1,6 +1,6 @@
 {
   "name": "introspect-fun",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JavaScript function introspection to retrieve the parameters' name of a function",
   "main": "index.js",
   "directories": {
