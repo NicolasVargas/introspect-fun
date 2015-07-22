@@ -10,16 +10,16 @@ describe('Will introspect function() with zero args', function() {
   }
   var result;
 
-  it('Sould have returned a result', function() {
+  it('Should have returned a result', function() {
     result = introspect(fn);
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould have returned an empty array', function() {
+  it('Should have returned an empty array', function() {
     assert.deepEqual(result, []);
   });
 });
@@ -30,16 +30,16 @@ describe('Will introspect function(arg1, arg2, arg3)', function() {
   }
   var result;
 
-  it('Sould have returned a result', function() {
+  it('Should have returned a result', function() {
     result = introspect(fn);
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould have returned the results as : ["arg1", "arg2", "arg3"]',
+  it('Should have returned the results as : ["arg1", "arg2", "arg3"]',
     function() {
       assert.deepEqual(result, ['arg1', 'arg2', 'arg3']);
     });
@@ -56,7 +56,7 @@ describe(
       introspect(fnWrong);
     }
 
-    it('Sould throw a "NOT_A_FUNCTION" error', function() {
+    it('Should throw a "NOT_A_FUNCTION" error', function() {
       assert.throw(wrongCall, /NOT_A_FUNCTION/);
     });
   });
@@ -67,16 +67,16 @@ describe('Will introspect function(arg1, /*comments*/ arg2, arg3)', function() {
   }
   var result;
 
-  it('Sould have returned a result', function() {
+  it('Should have returned a result', function() {
     result = introspect(fn);
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould have returned the results as : ["arg1", "arg2", "arg3"]',
+  it('Should have returned the results as : ["arg1", "arg2", "arg3"]',
     function() {
       assert.deepEqual(result, ['arg1', 'arg2', 'arg3']);
     });
@@ -93,21 +93,21 @@ describe('Will introspect a function with nested functions', function() {
     return nested(arg1, arg2);
   }
 
-  it('Sould have returned a result', function() {
+  it('Should have returned a result', function() {
     result = introspect(fn);
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould not have an array with values ["nestedArg1", "nestedArg2"]',
+  it('Should not have an array with values ["nestedArg1", "nestedArg2"]',
     function() {
       assert.notDeepEqual(result, ['nestedArg1', 'nestedArg2']);
     });
 
-  it('Sould have returned the results as : ["arg1", "arg2"]', function() {
+  it('Should have returned the results as : ["arg1", "arg2"]', function() {
     assert.deepEqual(result, ['arg1', 'arg2']);
   });
 });
@@ -116,16 +116,16 @@ describe('Will introspect a function with nested functions', function() {
 describe('Will introspect a function declared with es6 arrows', function() {
   var result;
 
-  it('Sould have returned a result', function() {
+  it('Should have returned a result', function() {
     result = introspect(myParam => myParam.toString());
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould have returned the results as : ["myParam"]', function() {
+  it('Should have returned the results as : ["myParam"]', function() {
     assert.deepEqual(result, ['myParam']);
   });
 });
@@ -135,17 +135,17 @@ describe('Will introspect a generator function', function() {
   var myGen = function *(arg1) {
     return arg1;
   }
-  
-  it('Sould have returned a result', function() {
+
+  it('Should have returned a result', function() {
     result = introspect(myGen);
     assert.isDefined(result);
   });
 
-  it('Sould have returned an array', function() {
+  it('Should have returned an array', function() {
     assert.instanceOf(result, Array);
   });
 
-  it('Sould have returned the results as : ["arg1"]', function() {
+  it('Should have returned the results as : ["arg1"]', function() {
     assert.deepEqual(result, ['arg1']);
   });
 });
