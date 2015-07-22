@@ -48,6 +48,12 @@ var resArrow = introspect(arg1 => arg1+1);
 // resArrow = ['arg1']
 ```
 
+## Motivation
+
+Inspired from
+* [Jack Allan](http://stackoverflow.com/users/315017/jack-allan)'s answer on [stackoverflow](http://stackoverflow.com/a/9924463)
+* [Killianc](https://github.com/kilianc)'s node module : [node-introspect](https://github.com/kilianc/node-introspect)
+
 ## Run test
 ```sh
 npm test
