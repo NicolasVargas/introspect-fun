@@ -20,6 +20,10 @@
     "generator",
     "arrow"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolasVargas/introspect-fun.git"
+  },
   "author": "Nicolas VARGAS",
   "license": "MIT",
   "devDependencies": {
